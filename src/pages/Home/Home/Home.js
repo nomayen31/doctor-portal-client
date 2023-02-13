@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import InfoCards from '../InfoCard/InfoCards';
 import MakeAppointement from '../MakeAppointement/MakeAppointement';
 import Services from '../Service/Services';
+import Testomianal from '../Testomianal/Testomianal';
 import YoursTrams from '../YoursTrams/YoursTrams';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Services></Services>
             <YoursTrams></YoursTrams>
             <MakeAppointement></MakeAppointement>
+            <Testomianal></Testomianal>
         </div>
     );
 };
