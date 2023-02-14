@@ -1,8 +1,6 @@
 import React from 'react';
 import background from '../../../assets/images/appointment.png'
 
-import From from '../../../pages/Home//ContactUs/Form';
-
 const ContactUs = () => {
     return (
         <section className=''style={{
