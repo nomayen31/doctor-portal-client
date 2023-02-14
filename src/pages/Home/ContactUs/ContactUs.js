@@ -1,6 +1,8 @@
 import React from 'react';
 import background from '../../../assets/images/appointment.png'
 
+import From from '../../../pages/Home//ContactUs/Form';
+
 const ContactUs = () => {
     return (
         <section className=''style={{
@@ -10,7 +12,7 @@ const ContactUs = () => {
                 <h3 className='text-primary font-bold  text-lg'>Contact Us</h3>
                 <h1 className='text-black text-3xl'>Stay connected with us</h1>
             </div>
-            
+        
         </section>
     );
 };
