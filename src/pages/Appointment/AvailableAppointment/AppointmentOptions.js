@@ -10,7 +10,7 @@ const AppointmentOptions = ({ appointmentOptions }) => {
                 <p>{slots.length > 0 ? slots[0] : 'Try another day'}</p>
                 <p>{slots.length} {slots.length > 1? 'Spaces' : 'Space'}</p>
                 <div className="card-actions justify-center">
-                    <button className="btn btn-primary text-white">Book Appointment</button>
+                    <label htmlFor="booking-modal" className="btn btn-primary text-white">Book Appointment</label>
                 </div>
             </div>
         </div>
