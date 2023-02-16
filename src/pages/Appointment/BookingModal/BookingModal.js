@@ -11,7 +11,10 @@ const BookingModal = ({ treatment, selectedDate }) => {
         const slot =form.slot.value;
         const name= form.name.value;
         const email =form.email.value;
+        [3,4,5].map((value, i) => console.log(value));
         const phone =form.phone.value;
+
+        console.log(date, slot, name, email, phone);
 
     }
     return (
@@ -26,14 +29,17 @@ const BookingModal = ({ treatment, selectedDate }) => {
                         <select name='slot' className="select select-bordered w-full ">
                             
                             {
-                                slots.map(slot => <option value={slot}>{slot}</option>)
+                                slots.map((slot, i) => <option 
+                                value={slot}
+                                key={i}
+                                >{slot}</option>)
                             }
                         </select>
-                        <input name='name' type="text" placeholder="Your Name" className="input w-full input-bordered " />
-                        <input name='email' type="email" placeholder="Email Address" className="input w-full input-bordered " />
-                        <input type="text" placeholder="Type here" className="input w-full input-bordered " />
-                        <br></br>
-                        <input name='phone' className='btn btn-accent w-full input-bordered max-w-xm' placeholder='Your Phone number' type="submit" value="submit"></input>
+                        <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
+                        <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
+                        <input name="phone" type="text" placeholder="Phone Number" className="input w-full input-bordered" />
+                        <br />
+                        <input className='btn btn-accent w-full' type="submit" value="Submit" />
                     </form>
                 </div>
             </div>
