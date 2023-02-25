@@ -8,7 +8,8 @@ const Login = () => {
     const {signIn} =useContext(AuthContext);
 
     const [loginError, setLoginError] =useState('');
-    const handleLogin =data =>{
+
+    const handleLogin = data =>{
         console.log(data);
         setLoginError('');
         signIn(data.email, data.password)

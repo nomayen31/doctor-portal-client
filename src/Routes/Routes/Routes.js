@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
 import Appointment from "../../pages/Appointment/Appointment/Appointment";
+import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login";
 import SignUp from "../../pages/SignUp/SignUp";
@@ -28,6 +29,10 @@ import SignUp from "../../pages/SignUp/SignUp";
                 element:<Appointment></Appointment>
             }
         ]
+    },
+    {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>
     }
 ]);
 
