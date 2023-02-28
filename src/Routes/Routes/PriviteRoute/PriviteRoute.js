@@ -20,4 +20,4 @@ const PriviteRoute = ({children}) => {
     
 };
 
-export default PriviteRoute;
+export default PriviteRoute; 
