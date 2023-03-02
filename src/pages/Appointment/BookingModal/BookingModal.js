@@ -14,7 +14,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
         const slot = form.slot.value;
         const name = form.name.value;
         const email = form.email.value;
-        [3, 4, 5].map((value, i) => console.log(value));
+        // [3, 4, 5].map((value, i) => console.log(value));
         const phone = form.phone.value;
         const booking = {
             appointmentDate: date,
