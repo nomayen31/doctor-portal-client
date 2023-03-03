@@ -2,19 +2,17 @@ import { format } from 'date-fns';
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { AuthContext } from '../../../context/AuthProvider';
-
-const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
+const BookingModal = ({ treatment, setTreatment, selectedDate,refetch }) => {
     const { name: treatmentName, slots } = treatment;
     const date = format(selectedDate, 'PP')
     const { user } = useContext(AuthContext)
-
     const handleBooking = e => {
         e.preventDefault();
         const form = e.target;
         const slot = form.slot.value;
         const name = form.name.value;
         const email = form.email.value;
-        // [3, 4, 5].map((value, i) => console.log(value));
+
         const phone = form.phone.value;
         const booking = {
             appointmentDate: date,
@@ -36,11 +34,11 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
                 console.log(data);
                 if (data.acknowledged) {
                     setTreatment(null);
-                    toast.success('booking confirmed')
+                    toast.success('booking confirmed');
+                    refetch();
                 }
             })
         setTreatment(null);
-
     }
     return (
         <>
