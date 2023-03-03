@@ -17,6 +17,8 @@ const AvailableAppointment = ({ selectedDate }) => {
         .then(res => res.json())
     })
 
+    
+
     // useEffect(() => {
     //     fetch('http://localhost:5000/appointmentOptions')
     //         .then(res => res.json())
@@ -41,7 +43,6 @@ const AvailableAppointment = ({ selectedDate }) => {
                     treatment={treatment}
                     selectedDate={selectedDate}
                     setTreatment={setTreatment}
-
                 ></BookingModal>
 
             }
