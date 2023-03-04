@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
 import Appointment from "../../pages/Appointment/Appointment/Appointment";
 import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
@@ -33,7 +34,14 @@ import PriviteRoute from "./PriviteRoute/PriviteRoute";
     },
     {
         path:'/dashboard',
-        element:<PriviteRoute><Dashboard></Dashboard></PriviteRoute>
+        element:<PriviteRoute><DashboardLayout></DashboardLayout></PriviteRoute>,
+        children:[
+            {
+                path:'/dashboard',
+                element:<Dashboard></Dashboard>
+
+            }
+        ]
     }
 ]);
 
